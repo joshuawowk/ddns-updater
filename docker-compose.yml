@@ -7,9 +7,9 @@ services:
     ports:
       - 8000:8000/tcp
     volumes:
-      - ./data:/updater/data
+      - /docker/ddns-updater/data:/updater/data
     environment:
-      - CONFIG=
+      # - CONFIG=
       - PERIOD=5m
       - UPDATE_COOLDOWN_PERIOD=5m
       - PUBLICIP_FETCHERS=all
@@ -31,5 +31,5 @@ services:
       # Other
       - LOG_LEVEL=info
       - LOG_CALLER=hidden
-      - SHOUTRRR_ADDRESSES=
+      # - SHOUTRRR_ADDRESSES=
     restart: always
